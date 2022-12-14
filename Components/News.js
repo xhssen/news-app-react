@@ -13,7 +13,7 @@ const News = ({category}) => {
     
     const fetchNews=async()=>{
       try {      
-        let url=`https://newsapi.org/v2/everything?q=${category}&from=2022-11-11&sortBy=publishedAt&language=en&apiKey=356662475a6648d09a7bf40a94e9619f`;
+        let url=`https://newsapi.org/v2/everything?q=${category}&sortBy=publishedAt&language=en&apiKey=356662475a6648d09a7bf40a94e9619f`;
          const response= await fetch(url);
          const newsRes = await response.json();
          setNews(newsRes.articles);
